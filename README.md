@@ -28,6 +28,7 @@ Quick Start
 * run the example/test.js
 
         node examples/test.js
+
 Usage
 -----
 
@@ -40,8 +41,13 @@ Usage
 * Retrieve Data from curl
 
         members:
-          status     - Http Response code
-          body       - Http body
+          status           - Http Response code
+          body             - Http body
+
+          url              - the url set by curl(...)
+          options          - the options set by curl(...)
+          defaultOptions   - the defaultOptions
+          effectiveOptions - the options curl used
 
         methods:
           info(name) - Get information of result, see 'info' section
@@ -73,6 +79,7 @@ Options
 * node-curl Extra Options
 
         RAW   - Returns Buffer instead of String in result.body
+        DEBUG - Replace curl.debug
 
 * About slist parameters
 
@@ -97,7 +104,3 @@ Infos
 
           slist will be returns in Array
           eg: CURLINFO_COOKIELIST
-
-Hints
------
-
